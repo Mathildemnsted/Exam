@@ -1,7 +1,7 @@
 # A
 
 data1 = {
-    'salesTarget': input("type performance of Sales Target: Less than 80%: Poor\n80% to 100%: Average\n 100% to 120%: Good\nAbove 120%: Excellent\n"),
+    'salesTarget': input("type performance of Sales Target: Less than 80%: Poor\n80% to 100%: Average\n100% to 120%: Good\nAbove 120%: Excellent\n"),
     'customerSatisfaction': input("type performance of Customer Satisfaction:\nLess than 6: Poor\n6 to 7: Average\n8 to 9: Good\n10: Excellent\n"),
     'attendance': input("type performance of attendance:\nLess than 20 days: Poor\n20 to 24 days: Average\n25 to 27 days: Good\n28 and more days: Excellent\n"),
     'peerFeedback': input("Type performance of Peer Feedback:\nLess than 4: Poor\n4 to 6: Average\n7 to 8: Good\n9 to 10: Excellent\n")

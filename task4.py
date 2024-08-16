@@ -7,7 +7,7 @@ avgDemand = 800
 maxProduction = 1200
 
 def simulate_production(productionCost):
-    productionQuantities = list(range(maxProduction + 1)) #i make the list so i can use it to plot the figure 
+    productionQuantities = list(range(maxProduction + 1)) #i make the lists so i can use it to plot the figure 
     avgProfits = []
 
     for production in productionQuantities:

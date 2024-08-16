@@ -28,7 +28,7 @@ print(f"The store with most consistent sales is: store {storeMinStd}, which has 
 sales['Month'] = sales['Date'].dt.to_period('M') # set dates to months in yyyy-mm format
 monthly_sales_trend = sales.groupby(['Store', 'Month'])['Sales'].sum().reset_index() #sum the sales pr months ans set the series to a dataframe
 monthly_sales_trend.columns = ['Store', 'Month', 'TotalSales'] #create the "totalSales header"
-print(f"the monthly sales for each store:\n{monthly_sales_trend}")
+print(f"The monthly sales for each store:\n{monthly_sales_trend}")
 
 #Sales Distribution by day of the week 
 avgSalesWeekDay = sales.groupby(['DayOfWeek'])['Sales'].mean()
@@ -54,8 +54,7 @@ plt.figure()
 
 for store in topStores:
     store_data = topSales[topSales['Store'] == store]
-    plt.plot(store_data['Date'], store_data['Sales'], label=f'Store {store}') # I im not sure if this is the correct line plot, but i do not have time to correct it 
-
+    plt.plot(store_data['Date'].index, store_data['Sales'].values, label=f'Store {store}') # I im not sure if this is the correct line plot, but i do not have time to correct it 
 plt.title('Sales Trend for the Top 5 Stores')
 plt.xlabel('Date')
 plt.ylabel('Sales')
